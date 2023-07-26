@@ -1,0 +1,88 @@
+
+
+<button (click)="clickAddShipment()" type="button" class="btn btn-primary mx-3 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Shipment</button>
+
+<table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Package ID</th>
+        <th scope="col">Courier</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Est. Delivery</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of shipmentData">
+        <td>{{row.packageId}}</td>
+        <td>{{row.courier}}</td>
+        <td>{{row.weight}}</td>
+        <td>{{row.destination}}</td>
+        <td>{{row.estDelivary}}</td>
+        <td>{{row.packStatus}}</td>
+        <td>
+          <button (click)="onEdit(this.row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+          <button (click)="deleteShipment(this.row)" class="btn btn-danger mx-3">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Shipment Detail</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <!-- content for forms
+          <app-forms></app-forms>-->
+
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label class="form-label">Package ID</label>
+              <input type="text" formControlName="packageId" class="form-control" required>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label">Courier</label>
+                <input type="text" formControlName="courier" class="form-control">
+              </div>
+        
+            <div class="mb-3">
+                <label class="form-label">Weight</label>
+                <input type="text" formControlName="weight" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Destination</label>
+                <input type="text" formControlName="destination" class="form-control">
+              </div>
+        
+              <div class="mb-3">
+                <label class="form-label">Est. Delivary</label>
+                <input type="text" formControlName="estDelivary" class="form-control">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Status</label>
+                <input type="text" formControlName="packStatus" class="form-control">
+              </div>
+        
+        
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postShipmentDetails()"class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateShipmentDetails()"class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
