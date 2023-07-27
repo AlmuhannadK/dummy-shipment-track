@@ -1,0 +1,33 @@
+ol {
+	padding: 10px;
+	margin: 40px;
+	max-width: 1200px;
+	position: relative;
+}
+
+ol::before {
+	content: '';
+	width: 0;
+	height: 100%;
+	position: center;
+	top: 10;
+	left: 8%; 
+	background: navajowhite;
+}
+
+li {
+	padding: 0.5rem 1.5rem 1rem;
+	border-radius: 1.5rem;
+	background:navajowhite;
+}
+
+li + li {
+	margin-top: 30px;
+}
+
+::marker {
+	font-weight: 600;
+	color: rgb(71, 135, 255);
+	font-size: 1.8rem;
+}
+

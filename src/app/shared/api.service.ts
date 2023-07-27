@@ -23,14 +23,14 @@ export class ApiService {
   }
 
   updateShipment(data : any){
-    return this.http.put<any>("http://localhost:3000/posts", data)
+    return this.http.put<any>("http://localhost:3000/posts/", data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   deleteShipment(data : any){
-    return this.http.delete<any>("http://localhost:3000/posts", data)
+    return this.http.delete<any>("http://localhost:3000/posts/")
     .pipe(map((res:any)=>{
       return res;
     }))
