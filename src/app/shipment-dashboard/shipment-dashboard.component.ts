@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ShipmentModel } from '../shipment-dashboard/shipment-dashboard.model';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -39,6 +40,7 @@ export class ShipmentDashboardComponent {
     this.showAdd = true;
     this.showUpdate = false;
   }
+  
 
   postShipmentDetails(){
     //appending values from form to object to be sent
