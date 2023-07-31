@@ -1,8 +1,11 @@
 
+<div class="main-button">
+  <button (click)="clickAddShipment()" type="button" class="btn btn-primary mx-3 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Shipment    
+  </button>
+</div>
 
-<button (click)="clickAddShipment()" type="button" class="btn btn-primary mx-3 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Shipment</button>
-
-<table class="table mt-5">
+<div class="main-table">
+<table class="table mt-5 text-md-center">
     <thead>
       <tr>
         <th scope="col">Package ID</th>
@@ -41,6 +44,7 @@
       </tr>
     </tbody>
   </table>
+</div>
 
 
 <!-- Modal -->
