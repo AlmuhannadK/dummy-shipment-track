@@ -23,6 +23,8 @@
         <td>{{row.estDelivary}}</td>
         <td>{{row.packStatus}}</td>
         <td> -->
+
+          <!-- static for now -->
         <tr>
           <td>1102112</td>
         <td>FedEx</td>
@@ -31,9 +33,10 @@
         <td>August, 12</td>
         <td>Shipped</td>
         <td>
-          
-          <button (click)="onEdit(this.row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
-          <button (click)="deleteShipment(this.row)" class="btn btn-danger mx-3">Delete</button>
+          <!-- (click)="onEdit(this.row)" -->
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+          <!-- (click)="deleteShipment(this.row)" -->
+          <button class="btn btn-danger mx-3">Delete</button>
         </td>
       </tr>
     </tbody>
