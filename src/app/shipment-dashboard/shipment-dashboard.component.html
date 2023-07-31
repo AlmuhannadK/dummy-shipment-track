@@ -15,14 +15,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of shipmentData">
+      <!-- <tr *ngFor="let row of shipmentData">
         <td>{{row.packageId}}</td>
         <td>{{row.courier}}</td>
         <td>{{row.weight}}</td>
         <td>{{row.destination}}</td>
         <td>{{row.estDelivary}}</td>
         <td>{{row.packStatus}}</td>
+        <td> -->
+        <tr>
+          <td>1102112</td>
+        <td>FedEx</td>
+        <td>11 KG</td>
+        <td>Riyadh</td>
+        <td>August, 12</td>
+        <td>Shipped</td>
         <td>
+          
           <button (click)="onEdit(this.row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
           <button (click)="deleteShipment(this.row)" class="btn btn-danger mx-3">Delete</button>
         </td>

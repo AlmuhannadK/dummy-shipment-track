@@ -16,6 +16,7 @@ export class ShipmentDashboardComponent {
   shipmentModelObj : ShipmentModel = new ShipmentModel();
   shipmentData !: any;
 
+  //add or update button change
   showAdd !: boolean;
   showUpdate !: boolean;
 
