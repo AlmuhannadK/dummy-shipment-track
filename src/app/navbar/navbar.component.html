@@ -1,27 +1,82 @@
 
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <img [src]="imageLink" alt="tabadul" width="200" height="100" class="d-inline-block">
-      <a class="navbar-brand" routerLink="/">WASHAJ SHIPMENT TRACKING</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title">Washaj Portal</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" routerLink="/about">About Washaj</a>
-            </li>
-          </ul>
 
-        </div>
+<!-- it actually worked!! put the styles in variables then call them via directives like so [ngClass]="test" -->
+<!-- add the remaining styles in css to this component -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light fixed-top" [ngClass]="test1"> 
+  <div class="container">
+    <a class="navbar-brand" href="#"><span class="text-warning">WASHAJ</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true" hidden >Admin Page</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- *************************************************** -->
+<!-- FIRST GUIDE -->
+
+<!-- Starting the header-top section -->
+<!-- <section class="header-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <ul>
+          <li><i class="fa-brands fa-padlet fa-flip" style="color: black;"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+        <a routerLink="/">contact@mail.com</a>
+
+      </div>
+      <div class="col-md-4">
+
+        <p> column 4 spaces</p>
+      </div>
+      <div class="col-md 4">
+        <ul>
+          <li><a href="#">+996-123-456</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Dropdown</a></li>
+
+        </ul>
+
       </div>
     </div>
-  </nav>
+  </div>
+</section> -->
+<!-- End of the header-top section -->
+
+
